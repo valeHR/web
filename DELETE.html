@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema CRUD</title>
+    <link rel="stylesheet" href="CREATE.css">
+</head>
+<body>
+<!--   <div class="container">
+        <h2>Sistema CRUD de Usuarios</h2>
+        <form action="scritp/DELETE.php" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="password" name="contraseña" placeholder="Contraseña" required>
+            <button type="submit">Crear Usuario</button>
+        </form>
+        <h2>Usuarios</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo electrónico</th>
+                <th>Acciones</th>
+            </tr>
+            <?php include('read.php'); ?>
+        </table>
+    </div>     -->
+    <!--Modal para actualización de usuario 
+    <div id="modal-update" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Actualizar Usuario</h3>
+            <form id="update-form" action="update.php" method="post">
+                <input type="hidden" name="id" id="update-id">
+                <input type="text" name="nombre" id="update-nombre" placeholder="Nombre" required>
+                <input type="email" name="email" id="update-email" placeholder="Correo electrónico" required>
+                <button type="submit">Actualizar</button>
+            </form>
+        </div>
+    </div>                      -->
+    <!-- Modal para confirmación de eliminación de usuario -->
+    <div id="modal-delete" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Confirmar eliminación</h3>
+            <h4>Ingresa un nombre para eliminar</h4>
+            <p>¿Estás seguro de que deseas eliminar estos datos?</p>
+            <form id="delete-form" action="scritp/DELETE.php" method="post">
+                <input type="text" name="nom" id="delete-nom">
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Función para abrir el modal de actualización con los datos del usuario seleccionado
+        function openUpdateModal(id, nombre, matricula, password, cuatrimestre) {
+            document.getElementById("update-id").value = id;
+            document.getElementById("update-nombre").value = nom;
+            document.getElementById("update-matricula").value = mat;
+            document.getElementById("update-password").value = pas;
+            document.getElementById("update-cuatrimestre").value = cu;
+
+            document.getElementById("modal-update").style.display = "block";
+        }
+
+        // Función para abrir el modal de confirmación de eliminación
+        function openDeleteModal(id) {
+            document.getElementById("delete-nombre").value = nom;
+            document.getElementById("modal-delete").style.display = "block";
+        }
+
+        // Función para cerrar todos los modales al hacer clic en la "X"
+        var closeButtons = document.getElementsByClassName("close");
+        for (var i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].addEventListener("click", function() {
+                var modals = document.getElementsByClassName("modal");
+                for (var j = 0; j < modals.length; j++) {
+                    modals[j].style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

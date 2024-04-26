@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema CRUD</title>
+    <link rel="stylesheet" href="CREATE.css">
+
+</head>
+<body>
+  <!--   <div class="container">
+        <h2>Sistema CRUD de Usuarios</h2>
+        <form action="scritp/UPDATE.php" method="post">
+            <input type="text" name="nom" placeholder="Nombre" required>
+            <input type="text" name="mat" placeholder="matricula" >
+            <input type="password" name="pas" placeholder="password" >
+            <input type="text" name="cu" placeholder="cuatrimestre" >
+            <button type="submit">Crear Usuario</button>
+        </form>
+        <h2>Usuarios</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Matricula</th>
+                <th>Password</th>
+                <th>Cuatrimestre</th>
+            </tr>
+            <?php include('READ.php'); ?>
+        </table>
+    </div>    -->
+    <!-- Modal para actualización de usuario -->
+    <div id="modal-update" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Actualizar datos</h3>
+            <form id="update-form" action="scritp/UPDATE.php" method="POST">
+                <input type="text" name="nom" id="update-nom" placeholder="Actualizar nombre" required>
+                <input type="text" name="mat" id="update-mat" placeholder="Actualizar matricula" >
+                <input type="password" name="pas" id="update-pas" placeholder="Actualizar password" >
+                <input type="text" name="cu" id="update-cu" placeholder="Actualizar cuatrimestre" >
+                <button type="submit">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

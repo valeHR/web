@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CREATE.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de estudiantes</h1>
+        <h2>Ingrese un nombre para realizar la consulta</h2>
+        <form action="scritp/READ.php" method="post">
+            <input type="hidden" name="id" placeholder="ID" required>
+            <input type="text" name="nom" placeholder="Nombre" required>
+            <input type="text" name="mat" placeholder="matricula" >
+            <input type="password" name="pas" placeholder="password" >
+            <input type="text" name="cu" placeholder="cuatrimestre" >
+            <button type="submit">Buscar estudiante</button>
+        </form>
+        <h2>Estudiante</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Matricula</th>
+                <th>Password</th>
+                <th>Cuatrimestre</th>
+            </tr>
+          <!--  <?php include('READ.php'); ?>      ---->
+        </table>
+    </div>
+</body>
+</html>
